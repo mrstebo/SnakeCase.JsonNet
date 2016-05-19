@@ -7,8 +7,8 @@
     <ProjectGuid>{4946F82F-78BA-40F2-996F-0F9A90B566EF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JsonSerializer.SnakeCase</RootNamespace>
-    <AssemblyName>JsonSerializer.SnakeCase</AssemblyName>
+    <RootNamespace>SnakeCase.JsonNet</RootNamespace>
+    <AssemblyName>SnakeCase.JsonNet</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

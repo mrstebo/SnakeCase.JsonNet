@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("JsonSerializer.SnakeCase")]
+[assembly: AssemblyTitle("SnakeCase.JsonNet")]
 [assembly: AssemblyDescription("Json Serializer that converts property names to snake_case in the response")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("mrstebo")]
-[assembly: AssemblyProduct("JsonSerializer.SnakeCase")]
+[assembly: AssemblyProduct("SnakeCase.JsonNet")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

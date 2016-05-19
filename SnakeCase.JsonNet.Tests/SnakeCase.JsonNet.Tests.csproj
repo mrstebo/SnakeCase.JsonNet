@@ -6,8 +6,8 @@
     <ProjectGuid>{55E631E7-FB98-44E9-A5C1-24A22191A1F1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JsonSerializer.SnakeCase.Tests</RootNamespace>
-    <AssemblyName>JsonSerializer.SnakeCase.Tests</AssemblyName>
+    <RootNamespace>SnakeCase.JsonNet.Tests</RootNamespace>
+    <AssemblyName>SnakeCase.JsonNet.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -62,7 +62,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JsonSerializer.SnakeCase\JsonSerializer.SnakeCase.csproj">
+    <ProjectReference Include="..\SnakeCase.JsonNet\SnakeCase.JsonNet.csproj">
       <Project>{4946f82f-78ba-40f2-996f-0f9a90b566ef}</Project>
       <Name>JsonSerializer.SnakeCase</Name>
     </ProjectReference>

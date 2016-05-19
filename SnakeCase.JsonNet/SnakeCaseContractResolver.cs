@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json.Serialization;
 
-namespace JsonSerializer.SnakeCase
+namespace SnakeCase.JsonNet
 {
     public class SnakeCaseContractResolver : DefaultContractResolver
     {

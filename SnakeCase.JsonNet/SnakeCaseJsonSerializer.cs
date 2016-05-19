@@ -1,8 +1,9 @@
-﻿using Newtonsoft.Json.Converters;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
-namespace JsonSerializer.SnakeCase
+namespace SnakeCase.JsonNet
 {
-    public class SnakeCaseJsonSerializer : Newtonsoft.Json.JsonSerializer
+    public class SnakeCaseJsonSerializer : JsonSerializer
     {
         public SnakeCaseJsonSerializer()
         {

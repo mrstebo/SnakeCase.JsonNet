@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using NUnit.Framework;
 
-namespace JsonSerializer.SnakeCase.Tests
+namespace SnakeCase.JsonNet.Tests
 {
     [TestFixture]
     public class SnakeCaseJsonSerializerTests

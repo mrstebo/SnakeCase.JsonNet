@@ -1,4 +1,4 @@
-# JsonSerializer.SnakeCase
+# SnakeCase.JsonNet
 Json Serializer that converts property names to snake_case in the response.
 
 
