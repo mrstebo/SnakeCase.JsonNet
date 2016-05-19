@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonSerializer.SnakeCase", "JsonSerializer.SnakeCase\JsonSerializer.SnakeCase.csproj", "{4946F82F-78BA-40F2-996F-0F9A90B566EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonSerializer.SnakeCase.Tests", "JsonSerializer.SnakeCase.Tests\JsonSerializer.SnakeCase.Tests.csproj", "{55E631E7-FB98-44E9-A5C1-24A22191A1F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4946F82F-78BA-40F2-996F-0F9A90B566EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4946F82F-78BA-40F2-996F-0F9A90B566EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4946F82F-78BA-40F2-996F-0F9A90B566EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55E631E7-FB98-44E9-A5C1-24A22191A1F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55E631E7-FB98-44E9-A5C1-24A22191A1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55E631E7-FB98-44E9-A5C1-24A22191A1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55E631E7-FB98-44E9-A5C1-24A22191A1F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
