@@ -86,12 +86,12 @@ namespace SnakeCase.JsonNet.Tests
         {
             var obj = new
             {
-                MyDog11 = "Fun Corp"
+                MyDog131 = "Fun Corp"
             };
 
             var result = PerformSerialize(obj);
             Debug.WriteLine(result);
-            Assert.That(result.Contains("my_dog_11"));
+            Assert.That(result.Contains("my_dog_131"));
         }
 
         [Test]
@@ -107,17 +107,44 @@ namespace SnakeCase.JsonNet.Tests
             Assert.That(result.Contains("my_llc_1"));
         }
 
+
+        [Test]
+        public void CanHandleABunchOfWors()
+        {
+            var obj = new
+            {
+                HeLovesPotatoes = "Fun Corp"
+            };
+
+            var result = PerformSerialize(obj);
+            Debug.WriteLine(result);
+            Assert.That(result.Contains("he_loves_potatoes"));
+        }
+
+        [Test]
+        public void CanHandleNumberInside()
+        {
+            var obj = new
+            {
+                My131Children = "Fun Corp"
+            };
+
+            var result = PerformSerialize(obj);
+            Debug.WriteLine(result);
+            Assert.That(result.Contains("my_131_children"));
+        }
+
         [Test]
         public void CanHandleMultipleNumberAcronym()
         {
             var obj = new
             {
-                MyLLC11 = "Fun Corp"
+                MyLLC1231 = "Fun Corp"
             };
 
             var result = PerformSerialize(obj);
             Debug.WriteLine(result);
-            Assert.That(result.Contains("my_llc_11"));
+            Assert.That(result.Contains("my_llc_1231"));
         }
 
         private string PerformSerialize(object obj)
