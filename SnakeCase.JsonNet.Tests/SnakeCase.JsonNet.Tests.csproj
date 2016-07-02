@@ -62,9 +62,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SnakeCase.JsonNet\SnakeCase.JsonNet.csproj">
-      <Project>{4946f82f-78ba-40f2-996f-0f9a90b566ef}</Project>
-      <Name>JsonSerializer.SnakeCase</Name>
+    <ProjectReference Include="..\SnakeCase.JsonNet.Portable\SnakeCase.JsonNet.Portable.csproj">
+      <Project>{d70cdc6b-1177-4a97-9375-f7377e003d3d}</Project>
+      <Name>SnakeCase.JsonNet.Portable</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
