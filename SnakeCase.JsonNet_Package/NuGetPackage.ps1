@@ -279,7 +279,10 @@ Write-Log "Creating package..." -ForegroundColor Green
 
 # Create symbols package if any .pdb files are located in the lib folder
 If ((Get-ChildItem *.pdb -Path .\lib -Recurse).Count -gt 0) {
-    $packageTask = Create-Process .\NuGet.exe ("pack Package.nuspec -Version $version -Symbol -Verbosity Detailed")
+	$nugetArgs = "pack Package.nuspec -Version $version -Symbol -Verbosity Detailed"
+	Write-Log $nugetArgs
+
+    $packageTask = Create-Process .\NuGet.exe ($nugetArgs)
     $packageTask.Start() | Out-Null
     $packageTask.WaitForExit()
             
@@ -291,7 +294,10 @@ If ((Get-ChildItem *.pdb -Path .\lib -Recurse).Count -gt 0) {
     $global:ExitCode = $packageTask.ExitCode
 }
 Else {
-    $packageTask = Create-Process .\NuGet.exe ("pack Package.nuspec -Version $version -Verbosity Detailed")
+	$nugetArgs = "pack Package.nuspec -Version $version -Verbosity Detailed"
+	Write-Log $nugetArgs
+
+    $packageTask = Create-Process .\NuGet.exe ($nugetArgs)
     $packageTask.Start() | Out-Null
     $packageTask.WaitForExit()
             

@@ -4,7 +4,7 @@
     <id>SnakeCase.JsonNet_Portable</id>
     <version>1.1.0</version>
     <title>SnakeCase.JsonNet_Portable</title>
-    <authors>tim</authors>
+    <authors>mrstebo</authors>
     <owners></owners>
     <description>
       Json Serializer that converts property names to snake_case in the response
@@ -21,9 +21,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright 2016</copyright>
     <dependencies>
-        <group targetFramework="netstandard1.1">
-          <dependency id="Newtonsoft.Json" version="9.0.1" />
-        </group>
+      <group targetFramework="netstandard1.1">
+        <dependency id="Newtonsoft.Json" version="9.0.1" />
+      </group>
     </dependencies>
     <references></references>
     <tags></tags>
