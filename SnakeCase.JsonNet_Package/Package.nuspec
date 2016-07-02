@@ -16,7 +16,7 @@
       Json Serializer that converts property names to snake_case in the response
     </summary>
     <language>en-US</language>
-    <licenseUrl>https://raw.githubusercontent.com/loqu8/SnakeCase.JsonNe/master/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/loqu8/SnakeCase.JsonNet/master/LICENSE.txt</licenseUrl>
     <projectUrl>https://github.com/loqu8/SnakeCase.JsonNet</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright 2016</copyright>
