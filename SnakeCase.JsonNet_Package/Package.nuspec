@@ -19,7 +19,7 @@
     <licenseUrl>https://raw.githubusercontent.com/loqu8/SnakeCase.JsonNe/master/LICENSE.txt</licenseUrl>
     <projectUrl>https://github.com/loqu8/SnakeCase.JsonNet</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <copyright>Copyright  2016</copyright>
+    <copyright>Copyright 2016</copyright>
     <dependencies>
         <group targetFramework="netstandard1.1">
           <dependency id="Newtonsoft.Json" version="9.0.1" />
