@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using Newtonsoft.Json;
 using NUnit.Framework;
+using System.Diagnostics;
 
 namespace SnakeCase.JsonNet.Tests
 {
@@ -53,7 +54,47 @@ namespace SnakeCase.JsonNet.Tests
             Assert.AreEqual("Smith", obj2.LastName);
         }
 
-        private string PerformSerialize(TestObject obj)
+        [Test]
+        public void CanHandleAcronyms()
+        {
+            var obj = new
+            {
+                MyLLC = "Fun Corp"
+            };
+
+            var result = PerformSerialize(obj);
+            Debug.WriteLine(result);
+
+            Assert.That(result.Contains("my_llc"));
+        }
+
+        [Test]
+        public void CanHandleNumber()
+        {
+            var obj = new
+            {
+                MyLLC1 = "Fun Corp"
+            };
+
+            var result = PerformSerialize(obj);
+            Debug.WriteLine(result);
+            Assert.That(result.Contains("my_llc_1"));
+        }
+
+        [Test]
+        public void CanHandleMultipleNumber()
+        {
+            var obj = new
+            {
+                MyLLC11 = "Fun Corp"
+            };
+
+            var result = PerformSerialize(obj);
+            Debug.WriteLine(result);
+            Assert.That(result.Contains("my_llc_11"));
+        }
+
+        private string PerformSerialize(object obj)
         {
             using (var sw = new StringWriter())
             {
