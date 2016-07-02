@@ -1,4 +1,10 @@
 # SnakeCase.JsonNet
+
+[![Join the chat at https://gitter.im/loqu8/SnakeCase.JsonNet](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/loqu8/SnakeCase.JsonNet?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build status](https://ci.appveyor.com/api/projects/status/on8ac5531jotb2qc?svg=true)](https://ci.appveyor.com/project/loqu8/snakecase.jsonnet)
+[![NuGet Version](https://img.shields.io/nuget/v/snakecase.jsonnet_portable.svg)](https://www.nuget.org/packages/snakecase.jsonnet_portable/)
+[![MyGet Prerelease](https://img.shields.io/myget/loqu8/vpre/snakecase.jsonnet_portable.svg?label=MyGet_Prerelease)](https://www.myget.org/feed/loqu8/package/nuget/snakecase.jsonnet_portable)
+
 Json Serializer that converts property names to snake_case in the response.
 
 

@@ -1,0 +1,67 @@
+install:
+- ps: >-
+
+    choco install gitversion.portable -pre -y
+    
+    $output = gitversion
+    
+    $joined = $output -join "`n"
+    
+    $versionInfo = $joined | ConvertFrom-Json
+    
+    $versionInfo | % { foreach ($property in $_.PSObject.Properties) { Set-AppveyorBuildVariable -Name "GitVersion_$($property.Name)" -Value "$($_.PSObject.properties[$property.Name].Value)"    }}
+    
+    $script_versionNumber = "$($versionInfo.NuGetVersionV2).$($env:APPVEYOR_BUILD_NUMBER)"
+    
+    Update-AppveyorBuild -Version $script_versionNumber
+    
+    $env:script_versionNumber = $script_versionNumber
+    
+    Write-Host "Build version: " $script_versionNumber
+
+    if($script_versionNumber.contains("-")) {
+      $env:Is_Prerelease  = 'true'
+    }
+    else
+    {
+      $env:Is_Prerelease  = 'false'
+    }
+
+    Write-Host "Is the build Prerelease: " $env:Is_Prerelease
+pull_requests:
+  do_not_increment_build_number: true
+image: Visual Studio 2015
+configuration: Release
+platform: Any CPU
+assembly_info:
+  patch: true
+nuget:
+  disable_publish_on_pr: true
+before_build:
+- ps: >-
+
+    cd C:\projects\grooveapi\src
+
+    nuget.exe restore
+build:
+  project: C:\projects\grooveapi\src\GrooveApi_vs2015.sln
+  verbosity: minimal
+#test: on
+#test_script:
+#- ps: nunit3-console C:\projects\grooveapi\src\Tests\bin\Release\Tests.dll --result=myresults.xml;format=AppVeyor --framework:net-4.5
+test:
+  assemblies: '**\*tests.dll'
+artifacts:
+- path: '\src\GrooveApi_Package\*.nupkg'
+  name: Package
+deploy:
+- provider: Environment
+  name: Public Nuget
+  on:
+    branch: master
+    Is_Prerelease: false
+- provider: Environment
+  name: PreRelease Nuget Feed
+  on:
+    branch: master
+    Is_Prerelease: true
