@@ -73,6 +73,32 @@ namespace SnakeCase.JsonNet.Tests
         {
             var obj = new
             {
+                MyDog1 = "Fun Corp"
+            };
+
+            var result = PerformSerialize(obj);
+            Debug.WriteLine(result);
+            Assert.That(result.Contains("my_dog_1"));
+        }
+
+        [Test]
+        public void CanHandleMultipleNumber()
+        {
+            var obj = new
+            {
+                MyDog11 = "Fun Corp"
+            };
+
+            var result = PerformSerialize(obj);
+            Debug.WriteLine(result);
+            Assert.That(result.Contains("my_dog_11"));
+        }
+
+        [Test]
+        public void CanHandleNumbeAcroynmr()
+        {
+            var obj = new
+            {
                 MyLLC1 = "Fun Corp"
             };
 
@@ -82,7 +108,7 @@ namespace SnakeCase.JsonNet.Tests
         }
 
         [Test]
-        public void CanHandleMultipleNumber()
+        public void CanHandleMultipleNumberAcronym()
         {
             var obj = new
             {
