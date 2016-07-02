@@ -40,19 +40,19 @@ nuget:
 before_build:
 - ps: >-
 
-    cd C:\projects\grooveapi\src
+    cd C:\projects\snakecase-jsonnet\src
 
     nuget.exe restore
 build:
-  project: C:\projects\grooveapi\src\GrooveApi_vs2015.sln
+  project: C:\projects\snakecase-jsonnet\src\SnakeCase.JsonNet.sln
   verbosity: minimal
 #test: on
 #test_script:
-#- ps: nunit3-console C:\projects\grooveapi\src\Tests\bin\Release\Tests.dll --result=myresults.xml;format=AppVeyor --framework:net-4.5
+#- ps: nunit3-console C:\projects\snakecase-jsonnet\src\Tests\bin\Release\Tests.dll --result=myresults.xml;format=AppVeyor --framework:net-4.5
 test:
   assemblies: '**\*tests.dll'
 artifacts:
-- path: '\src\GrooveApi_Package\*.nupkg'
+- path: '\src\SnakeCase.JsonNet_Package\*.nupkg'
   name: Package
 deploy:
 - provider: Environment
