@@ -26,8 +26,8 @@ build:
   verbosity: minimal
 
 after_build:
-  - cmd: nuget pack SnakeCase.JsonNet\SnakeCase.JsonNet.csproj -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
-  - cmd: nuget pack SnakeCase.JsonNet_Portable\SnakeCase.JsonNet_Portable.csproj -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
+  - cmd: nuget pack SnakeCase.JsonNet\SnakeCase.JsonNet.csproj -IncludeReferencedProjects -Build -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
+  - cmd: nuget pack SnakeCase.JsonNet_Portable\SnakeCase.JsonNet_Portable.csproj -IncludeReferencedProjects -Build -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
 
 artifacts:
   - path: '*.nupkg'
