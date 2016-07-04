@@ -1,6 +1,6 @@
 # SnakeCase.JsonNet
 
-[![Join the chat at https://gitter.im/loqu8/SnakeCase.JsonNet](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/loqu8/SnakeCase.JsonNet?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/mrstebo/SnakeCase.JsonNet](https://badges.gitter.im/mrstebo/SnakeCase.JsonNet.svg)](https://gitter.im/mrstebo/SnakeCase.JsonNet?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Build status](https://ci.appveyor.com/api/projects/status/j8qoan1wf6owxxj4?svg=true)](https://ci.appveyor.com/project/mrstebo/snakecase-jsonnet)
 
 
@@ -17,6 +17,10 @@ Json Serializer that converts property names to snake_case in the response.
 SnakeCase.JsonNet is available via [NuGet](https://www.nuget.org/packages/SnakeCase.JsonNet/):
 ```PowerShell
 Install-Package SnakeCase.JsonNet
+```
+
+SnakeCase.JsonNet_Portable is available via [NuGet](https://www.nuget.org/packages/SnakeCase.JsonNet_Portable/):
+```PowerShell
 Install-Package SnakeCase.JsonNet_Portable
 ```
 
