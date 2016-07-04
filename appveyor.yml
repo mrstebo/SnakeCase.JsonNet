@@ -22,12 +22,12 @@ before_build:
   - ps: gitversion /l console /output buildserver /updateAssemblyInfo /b (get-item env:APPVEYOR_REPO_BRANCH).Value
 
 build:
-  project: SnakeCase.JsonNet.sln
+  project: src/SnakeCase.JsonNet.sln
   verbosity: minimal
 
 after_build:
-  - cmd: nuget pack SnakeCase.JsonNet\SnakeCase.JsonNet.csproj -IncludeReferencedProjects -Build -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
-  - cmd: nuget pack SnakeCase.JsonNet_Portable\SnakeCase.JsonNet_Portable.csproj -IncludeReferencedProjects -Build -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
+  - cmd: nuget pack src\SnakeCase.JsonNet\SnakeCase.JsonNet.csproj -IncludeReferencedProjects -Build -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
+  - cmd: nuget pack src\SnakeCase.JsonNet_Portable\SnakeCase.JsonNet_Portable.csproj -IncludeReferencedProjects -Build -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
 
 artifacts:
   - path: '*.nupkg'
