@@ -33,6 +33,26 @@ namespace SnakeCase.JsonNet.Tests
             Assert.That(result.Contains("last_name"));
         }
 
+        [Test]
+        public void Deserialize_Should_Conver_Property_Names_Back()
+        {
+            var obj = new TestObject { Title = "Mr", FirstName = "John", LastName = "Smith" };
+
+            var result = PerformSerialize(obj);
+
+            Assert.That(result.Contains("title"));
+            Assert.That(result.Contains("first_name"));
+            Assert.That(result.Contains("last_name"));
+
+            // can we make a new test object from this?
+            var jr = new JsonTextReader(new StringReader(result));
+            var obj2 = _serializer.Deserialize<TestObject>(jr);
+
+            Assert.AreEqual("Mr", obj2.Title);
+            Assert.AreEqual("John", obj2.FirstName);
+            Assert.AreEqual("Smith", obj2.LastName);
+        }
+
         private string PerformSerialize(TestObject obj)
         {
             using (var sw = new StringWriter())
