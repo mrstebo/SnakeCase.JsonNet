@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using Newtonsoft.Json;
 using NUnit.Framework;
+using System.Diagnostics;
 
 namespace SnakeCase.JsonNet.Tests
 {
@@ -53,7 +54,100 @@ namespace SnakeCase.JsonNet.Tests
             Assert.AreEqual("Smith", obj2.LastName);
         }
 
-        private string PerformSerialize(TestObject obj)
+        [Test]
+        public void CanHandleAcronyms()
+        {
+            var obj = new
+            {
+                MyLLC = "Fun Corp"
+            };
+
+            var result = PerformSerialize(obj);
+            Debug.WriteLine(result);
+
+            Assert.That(result.Contains("my_llc"));
+        }
+
+        [Test]
+        public void CanHandleNumber()
+        {
+            var obj = new
+            {
+                MyDog1 = "Fun Corp"
+            };
+
+            var result = PerformSerialize(obj);
+            Debug.WriteLine(result);
+            Assert.That(result.Contains("my_dog_1"));
+        }
+
+        [Test]
+        public void CanHandleMultipleNumber()
+        {
+            var obj = new
+            {
+                MyDog131 = "Fun Corp"
+            };
+
+            var result = PerformSerialize(obj);
+            Debug.WriteLine(result);
+            Assert.That(result.Contains("my_dog_131"));
+        }
+
+        [Test]
+        public void CanHandleNumbeAcroynmr()
+        {
+            var obj = new
+            {
+                MyLLC1 = "Fun Corp"
+            };
+
+            var result = PerformSerialize(obj);
+            Debug.WriteLine(result);
+            Assert.That(result.Contains("my_llc_1"));
+        }
+
+
+        [Test]
+        public void CanHandleABunchOfWors()
+        {
+            var obj = new
+            {
+                HeLovesPotatoes = "Fun Corp"
+            };
+
+            var result = PerformSerialize(obj);
+            Debug.WriteLine(result);
+            Assert.That(result.Contains("he_loves_potatoes"));
+        }
+
+        [Test]
+        public void CanHandleNumberInside()
+        {
+            var obj = new
+            {
+                My131Children = "Fun Corp"
+            };
+
+            var result = PerformSerialize(obj);
+            Debug.WriteLine(result);
+            Assert.That(result.Contains("my_131_children"));
+        }
+
+        [Test]
+        public void CanHandleMultipleNumberAcronym()
+        {
+            var obj = new
+            {
+                MyLLC1231 = "Fun Corp"
+            };
+
+            var result = PerformSerialize(obj);
+            Debug.WriteLine(result);
+            Assert.That(result.Contains("my_llc_1231"));
+        }
+
+        private string PerformSerialize(object obj)
         {
             using (var sw = new StringWriter())
             {

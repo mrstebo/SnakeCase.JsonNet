@@ -1,4 +1,7 @@
 ﻿using Newtonsoft.Json.Serialization;
+using System.Collections.Generic;
+using System.Text;
+using System.Text.RegularExpressions;
 
 namespace SnakeCase.JsonNet
 {
@@ -10,6 +13,47 @@ namespace SnakeCase.JsonNet
         }
 
         private static string GetSnakeCase(string input)
+        {
+            return mrsteboGetSnakeCase(input);
+        }
+
+        private static string jonniiGetSnakeCase(string input)
+        {
+            return Regex.Replace(input, "([a-z])([A-Z])", "$1_$2").ToLower();
+        }
+
+        private static string jonniiModGetSnakeCase(string input)
+        {
+            return Regex.Replace(input, "([a-z0-9])([A-Z0-9])", "$1_$2").ToLower();
+        }
+
+        // not great
+        private static string roryfGetSnakeCase(string input, string separator = "_")
+        {
+
+            var parts = new List<string>();
+            var currentWord = new StringBuilder();
+
+            foreach (var c in input)
+            {
+                if (char.IsUpper(c) && currentWord.Length > 0)
+                {
+                    parts.Add(currentWord.ToString());
+                    currentWord.Clear();
+                }
+                currentWord.Append(char.ToLower(c));
+            }
+
+            if (currentWord.Length > 0)
+            {
+                parts.Add(currentWord.ToString());
+            }
+
+            return string.Join(separator, parts.ToArray());
+        }
+
+
+        private static string mrsteboGetSnakeCase(string input)
         {
             if (string.IsNullOrEmpty(input))
                 return input;
