@@ -1,5 +1,7 @@
 # SnakeCase.JsonNet
 
+[![Join the chat at https://gitter.im/mrstebo/SnakeCase.JsonNet](https://badges.gitter.im/mrstebo/SnakeCase.JsonNet.svg)](https://gitter.im/mrstebo/SnakeCase.JsonNet?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Join the chat at https://gitter.im/loqu8/SnakeCase.JsonNet](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/loqu8/SnakeCase.JsonNet?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build status](https://ci.appveyor.com/api/projects/status/74nqw67sxsrpuu9i?svg=true)](https://ci.appveyor.com/project/loqu8/SnakeCase.JsonNet)
 [![NuGet Version](https://img.shields.io/nuget/v/snakecase.jsonnet_portable.svg)](https://www.nuget.org/packages/snakecase.jsonnet_portable/)
