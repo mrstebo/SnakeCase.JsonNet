@@ -1,7 +1,6 @@
 version: '{build}'
 image: Visual Studio 2015
 configuration: Release
-platform: Any CPU
 pull_requests:
   do_not_increment_build_number: true
 
@@ -26,8 +25,8 @@ build:
   verbosity: minimal
 
 after_build:
-  - cmd: nuget pack src\SnakeCase.JsonNet\SnakeCase.JsonNet.csproj -IncludeReferencedProjects -Build -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
-  - cmd: nuget pack src\SnakeCase.JsonNet_Portable\SnakeCase.JsonNet_Portable.csproj -IncludeReferencedProjects -Build -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
+  - cmd: nuget pack src\SnakeCase.JsonNet\SnakeCase.JsonNet.csproj -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
+  - cmd: nuget pack src\SnakeCase.JsonNet_Portable\SnakeCase.JsonNet_Portable.csproj -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
 
 artifacts:
   - path: '*.nupkg'
