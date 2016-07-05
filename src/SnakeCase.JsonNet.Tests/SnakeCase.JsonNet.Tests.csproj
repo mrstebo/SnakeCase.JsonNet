@@ -62,9 +62,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SnakeCase.JsonNet_Portable\SnakeCase.JsonNet_Portable.csproj">
+    <ProjectReference Include="..\SnakeCase.JsonNet.Portable\SnakeCase.JsonNet.Portable.csproj">
       <Project>{d70cdc6b-1177-4a97-9375-f7377e003d3d}</Project>
-      <Name>SnakeCase.JsonNet_Portable</Name>
+      <Name>SnakeCase.JsonNet.Portable</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeCase.JsonNet", "SnakeCase.JsonNet\SnakeCase.JsonNet.csproj", "{4946F82F-78BA-40F2-996F-0F9A90B566EF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeCase.JsonNet.Tests", "SnakeCase.JsonNet.Tests\SnakeCase.JsonNet.Tests.csproj", "{55E631E7-FB98-44E9-A5C1-24A22191A1F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeCase.JsonNet_Portable", "SnakeCase.JsonNet_Portable\SnakeCase.JsonNet_Portable.csproj", "{D70CDC6B-1177-4A97-9375-F7377E003D3D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeCase.JsonNet.Portable", "SnakeCase.JsonNet.Portable\SnakeCase.JsonNet.Portable.csproj", "{D70CDC6B-1177-4A97-9375-F7377E003D3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
