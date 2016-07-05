@@ -1,9 +1,15 @@
 # SnakeCase.JsonNet
 
-[![Join the chat at https://gitter.im/mrstebo/SnakeCase.JsonNet](https://badges.gitter.im/mrstebo/SnakeCase.JsonNet.svg)](https://gitter.im/mrstebo/SnakeCase.JsonNet?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build status](https://ci.appveyor.com/api/projects/status/74nqw67sxsrpuu9i?svg=true)](https://ci.appveyor.com/project/loqu8/SnakeCase.JsonNet)
-[![NuGet Version](https://img.shields.io/nuget/v/snakecase.jsonnet_portable.svg)](https://www.nuget.org/packages/snakecase.jsonnet_portable/)
-[![MyGet Prerelease](https://img.shields.io/myget/loqu8/vpre/snakecase.jsonnet_portable.svg?label=MyGet_Prerelease)](https://www.myget.org/feed/loqu8/package/nuget/snakecase.jsonnet_portable)
+[![Join the chat at https://gitter.im/mrstebo/SnakeCase.JsonNet](https://badges.gitter.im/mrstebo/SnakeCase.JsonNet.svg)](https://gitter.im/mrstebo/SnakeCase.JsonNet?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Build status](https://ci.appveyor.com/api/projects/status/j8qoan1wf6owxxj4?svg=true)](https://ci.appveyor.com/project/mrstebo/snakecase-jsonnet)
+
+
+
+**SnakeCase.JsonNet**
+[![MyGet Prerelease](https://img.shields.io/myget/package-hub/v/SnakeCase.JsonNet.svg?label=MyGet_Prerelease)](https://www.myget.org/feed/package-hub/package/nuget/SnakeCase.JsonNet) [![NuGet Version](https://img.shields.io/nuget/v/SnakeCase.JsonNet.svg)](https://www.nuget.org/packages/SnakeCase.JsonNet/)
+
+**SnakeCase.JsonNet_Portable**
+[![MyGet Prerelease](https://img.shields.io/myget/package-hub/v/SnakeCase.JsonNet_Portable.svg?label=MyGet_Prerelease)](https://www.myget.org/feed/package-hub/package/nuget/SnakeCase.JsonNet_Portable) [![NuGet Version](https://img.shields.io/nuget/v/SnakeCase.JsonNet_Portable.svg)](https://www.nuget.org/packages/SnakeCase.JsonNet_Portable/)
 
 Json Serializer that converts property names to snake_case in the response.
 
@@ -11,6 +17,11 @@ Json Serializer that converts property names to snake_case in the response.
 SnakeCase.JsonNet is available via [NuGet](https://www.nuget.org/packages/SnakeCase.JsonNet/):
 ```PowerShell
 Install-Package SnakeCase.JsonNet
+```
+
+SnakeCase.JsonNet_Portable is available via [NuGet](https://www.nuget.org/packages/SnakeCase.JsonNet_Portable/):
+```PowerShell
+Install-Package SnakeCase.JsonNet_Portable
 ```
 
 ### Examples
