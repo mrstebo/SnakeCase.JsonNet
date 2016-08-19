@@ -54,6 +54,8 @@ namespace SnakeCase.JsonNet.Tests
 
             Assert.That(result.Contains("test[user]"));
             Assert.That(result.Contains("test_user"));
+            Assert.That(result.Contains("test[password]"));
+            Assert.That(result.Contains("test_password"));
         }
 
         [Test]
