@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Serialization;
+﻿using System.Text.RegularExpressions;
+using Newtonsoft.Json.Serialization;
 
 namespace SnakeCase.JsonNet
 {
@@ -14,36 +15,15 @@ namespace SnakeCase.JsonNet
             if (string.IsNullOrEmpty(input))
                 return input;
 
-            var buffer = "";
+            var buffer = input;
 
-            for (var i = 0; i < input.Length; i++)
-            {
-                var isLast = (i == input.Length - 1);
-                var isSecondFromLast = (i == input.Length - 2);
-
-                var current = input[i];
-                var next = !isLast ? input[i + 1] : '\0';
-                var afterNext = !isSecondFromLast && !isLast ? input[i + 2] : '\0';
-
-                buffer += char.ToLower(current);
-
-                if (!char.IsDigit(current) && char.IsUpper(next))
-                {
-                    if (char.IsUpper(current))
-                    {
-                        if (!isLast && !isSecondFromLast && !char.IsUpper(afterNext))
-                            buffer += "_";
-                    }
-                    else
-                        buffer += "_";
-                }
-
-                if (!char.IsDigit(current) && char.IsDigit(next))
-                    buffer += "_";
-                if (char.IsDigit(current) && !char.IsDigit(next) && !isLast)
-                    buffer += "_";
-            }
-
+            buffer = Regex.Replace(buffer, @"([A-Z]+)([A-Z][a-z])", "$1_$2");
+            buffer = Regex.Replace(buffer, @"([a-z\d])([A-Z])", "$1_$2");
+            buffer = Regex.Replace(buffer, @"-", "_");
+            buffer = Regex.Replace(buffer, @"\s", "_");
+            buffer = Regex.Replace(buffer, @"__+", "_");
+            buffer = buffer.ToLowerInvariant();
+            
             return buffer;
         }
     }
