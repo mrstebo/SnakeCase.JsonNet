@@ -28,7 +28,7 @@ after_build:
   - cmd: msbuild /t:pack src\SnakeCase.JsonNet\SnakeCase.JsonNet.csproj /p:Configuration=%CONFIGURATION% /p:Version=%GitVersion_NuGetVersion%
 
 artifacts:
-  - path: '*.nupkg'
+  - path: '**\*.nupkg'
     name: NuGet
 
 deploy:
