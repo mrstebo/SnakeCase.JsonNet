@@ -10,7 +10,7 @@ cache:
 install:
   - ps: choco install gitversion.portable -pre -y
 
-assembly_info:
+dotnet_csproj:
   patch: true
 
 nuget:
