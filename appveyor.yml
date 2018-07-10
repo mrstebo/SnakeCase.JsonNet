@@ -1,5 +1,5 @@
 version: '{build}'
-image: Visual Studio 2015
+image: Visual Studio 2017
 configuration: Release
 pull_requests:
   do_not_increment_build_number: true
@@ -25,8 +25,7 @@ build:
   verbosity: minimal
 
 after_build:
-  - cmd: nuget pack src\SnakeCase.JsonNet\SnakeCase.JsonNet.csproj -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
-  - cmd: nuget pack src\SnakeCase.JsonNet.Portable\SnakeCase.JsonNet.Portable.csproj -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
+  - cmd: msbuild /t:pack src\SnakeCase.JsonNet\SnakeCase.JsonNet.csproj /p:Configuration=%CONFIGURATION% /p:Version=%GitVersion_NuGetVersion%
 
 artifacts:
   - path: '*.nupkg'

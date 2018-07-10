@@ -8,20 +8,12 @@
 **SnakeCase.JsonNet**
 [![MyGet Prerelease](https://img.shields.io/myget/mrstebo/v/SnakeCase.JsonNet.svg?label=MyGet_Prerelease)](https://www.myget.org/feed/mrstebo/package/nuget/SnakeCase.JsonNet) [![NuGet Version](https://img.shields.io/nuget/v/SnakeCase.JsonNet.svg)](https://www.nuget.org/packages/SnakeCase.JsonNet/)
 
-**SnakeCase.JsonNet.Portable**
-[![MyGet Prerelease](https://img.shields.io/myget/mrstebo/v/SnakeCase.JsonNet.Portable.svg?label=MyGet_Prerelease)](https://www.myget.org/feed/mrstebo/package/nuget/SnakeCase.JsonNet.Portable) [![NuGet Version](https://img.shields.io/nuget/v/SnakeCase.JsonNet.Portable.svg)](https://www.nuget.org/packages/SnakeCase.JsonNet.Portable/)
-
 Json Serializer that converts property names to snake_case in the response.
 
 
 SnakeCase.JsonNet is available via [NuGet](https://www.nuget.org/packages/SnakeCase.JsonNet/):
 ```PowerShell
 Install-Package SnakeCase.JsonNet
-```
-
-SnakeCase.JsonNet.Portable is available via [NuGet](https://www.nuget.org/packages/SnakeCase.JsonNet.Portable/):
-```PowerShell
-Install-Package SnakeCase.JsonNet.Portable
 ```
 
 ### Examples
