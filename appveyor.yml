@@ -10,6 +10,9 @@ cache:
 install:
   - ps: choco install gitversion.portable -pre -y
 
+assembly_info:
+  patch: true
+
 dotnet_csproj:
   patch: false
 
@@ -26,11 +29,12 @@ build:
 
 after_build:
   - cmd: msbuild /t:pack src\SnakeCase.JsonNet\SnakeCase.JsonNet.csproj /p:Configuration=%CONFIGURATION% /p:Version=%GitVersion_NuGetVersion%
+  - cmd: nuget pack src\SnakeCase.JsonNet.Portable\SnakeCase.JsonNet.Portable.csproj -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
 
 artifacts:
   - path: '**\*.nupkg'
     name: NuGet
-
+ 
 deploy:
   - provider: Environment
     name: PreRelease Nuget Feed
