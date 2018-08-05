@@ -21,6 +21,8 @@ SnakeCase.JsonNet.Portable is available via [NuGet](https://www.nuget.org/packag
 Install-Package SnakeCase.JsonNet.Portable
 ```
 
+Note that the Portable version will be deprecated in future versions since the project now supports .net standard.
+
 ### Examples
 
 ```cs
