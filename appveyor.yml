@@ -32,7 +32,7 @@ after_build:
   - cmd: nuget pack src\SnakeCase.JsonNet.Portable\SnakeCase.JsonNet.Portable.csproj -Version "%GitVersion_NuGetVersion%" -Prop "target=%CONFIGURATION%"
 
 artifacts:
-  - path: '**\*.nupkg'
+  - path: '**\SnakeCase.JsonNet*.nupkg'
     name: NuGet
  
 deploy:
