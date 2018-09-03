@@ -7,7 +7,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("SnakeCase.JsonNet.Portable")]
-[assembly: AssemblyDescription("Json Serializer that converts property names to snake_case in the response")]
+[assembly: AssemblyDescription("Json Serializer that converts property names to snake_case in the response. " +
+    "WARNING: This is the PCL version of the library and will be removed in future releases. " +
+    "Please, consider using the .net standard version for new projects.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("mrstebo")]
 [assembly: AssemblyProduct("SnakeCase.JsonNet.Portable")]
