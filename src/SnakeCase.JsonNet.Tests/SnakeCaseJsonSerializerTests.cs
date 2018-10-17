@@ -34,7 +34,7 @@ namespace SnakeCase.JsonNet.Tests
         }
 
         [Test]
-        public void Deserialize_Should_Conver_Property_Names_Back()
+        public void Deserialize_Should_Convert_Property_Names_Back()
         {
             var obj = new TestObject { Title = "Mr", FirstName = "John", LastName = "Smith" };
 
